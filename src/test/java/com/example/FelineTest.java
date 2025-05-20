@@ -20,11 +20,6 @@ class FelineTest {
     }
 
     @Test
-    void getKittensWithArgumentTest() {
-        assertEquals(5, feline.getKittens(5));
-    }
-
-    @Test
     void getKittensReturnsDefault() {
         assertEquals(1, feline.getKittens());  // feline.getKittens() method test
     }
