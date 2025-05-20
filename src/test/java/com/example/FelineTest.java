@@ -9,23 +9,23 @@ class FelineTest {
     Feline feline = new Feline();
 
     @Test
-    void eatMeatReturnsCorrectFood() throws Exception {
+    void eatMeatReturnsCorrectFoodTest() throws Exception {
         List<String> expected = List.of("Животные", "Птицы", "Рыба");
         assertEquals(expected, feline.eatMeat());
     }
 
     @Test
-    void getFamilyReturnsCorrectValue() {
+    void getFamilyReturnsCorrectValueTest() {
         assertEquals("Кошачьи", feline.getFamily());
     }
 
     @Test
-    void getKittensReturnsDefault() {
-        assertEquals(1, feline.getKittens());
+    void getKittensWithArgumentTest() {
+        assertEquals(5, feline.getKittens(5));
     }
 
     @Test
-    void getKittensWithArgument() {
-        assertEquals(5, feline.getKittens(5));
+    void getKittensReturnsDefault() {
+        assertEquals(1, feline.getKittens());  // feline.getKittens() method test
     }
 }

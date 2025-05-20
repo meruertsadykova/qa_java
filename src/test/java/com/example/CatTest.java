@@ -18,14 +18,14 @@ class CatTest {
     }
 
     @Test
-    void getSoundReturnsMeow() {
+    void getSoundReturnsMeowTest() {
         Cat cat = new Cat(feline);
         assertEquals("Мяу", cat.getSound());
     }
 
     @Test
-    void getFoodReturnsPredatorFood2() throws Exception {
-        List<String> food = List.of("Мясо", "Птица");
+    void getFoodReturnsPredatorFood2Test() throws Exception {
+        List<String> food = List.of("Животные", "Птицы", "Рыба");
         Mockito.when(feline.eatMeat()).thenReturn(food);
 
         Cat cat = new Cat(feline);

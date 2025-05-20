@@ -14,8 +14,8 @@ class FelineKittensParameterizedTest {
             "3, 3",
             "10, 10"
     })
-    void getKittensReturnsExpectedCount(int input, int expected) {
+    void getKittensReturnsExpectedCountTest(int input, int expected) {
         Feline feline = new Feline();
-        assertEquals(expected, feline.getKittens(input));
+        assertEquals(expected, feline.getKittens(input));   // feline.getKittens(int kittensCount) method test
     }
 }

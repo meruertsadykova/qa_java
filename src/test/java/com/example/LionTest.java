@@ -33,14 +33,14 @@ class LionTest {
     @Test
     void lionThrowsExceptionIfInvalidSexTest() {
         Exception exception = assertThrows(Exception.class, () -> new Lion("непонятно", feline));
-        assertEquals("Используйте допустимые значения пола животного - самей или самка", exception.getMessage());
+        assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
     }
 
     @Test
     void getKittensReturnsFromFelineTest() throws Exception {
-        Mockito.when(feline.getKittens()).thenReturn(3);
+        Mockito.when(feline.getKittens()).thenReturn(1);
         Lion lion = new Lion("Самец", feline);
-        assertEquals(3, lion.getKittens());
+        assertEquals(1, lion.getKittens());
     }
 
     @Test
